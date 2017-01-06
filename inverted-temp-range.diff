@@ -1,0 +1,111 @@
+diff --git a/CSI/Common/Deck_S8Style.qml b/CSI/Common/Deck_S8Style.qml
+index 1ff662f..f558dfd 100755
+--- a/CSI/Common/Deck_S8Style.qml
++++ b/CSI/Common/Deck_S8Style.qml
+@@ -1370,8 +1370,8 @@ Module
+           enabled: focusedDeckId == 1
+
+           Wire { from: "%surface%.back";   to: "decks.1.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.1.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.1.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.1.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.1.tempo.coarse"; enabled: !module.shift }
+         }
+
+         // Deck B
+@@ -1380,8 +1380,8 @@ Module
+           enabled: focusedDeckId == 2
+
+           Wire { from: "%surface%.back";   to: "decks.2.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.2.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.2.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.2.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.2.tempo.coarse"; enabled: !module.shift }
+         }
+
+         // Deck C
+@@ -1390,8 +1390,8 @@ Module
+           enabled: focusedDeckId == 3
+
+           Wire { from: "%surface%.back";   to: "decks.3.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.3.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.3.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.3.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.3.tempo.coarse"; enabled: !module.shift }
+         }
+
+         // Deck D
+@@ -1400,8 +1400,8 @@ Module
+           enabled: focusedDeckId == 4
+
+           Wire { from: "%surface%.back";   to: "decks.4.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.4.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.4.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.4.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.4.tempo.coarse"; enabled: !module.shift }
+         }
+       }
+
+diff --git a/CSI/S5/Mixer.qml b/CSI/S5/Mixer.qml
+index 65c880e..bc057a0 100755
+--- a/CSI/S5/Mixer.qml
++++ b/CSI/S5/Mixer.qml
+@@ -8,8 +8,8 @@ Module
+
+   // Master Clock
+ 	MasterClock { name: "MasterTempo" }
+-  Wire { from: "%surface%.mixer.tempo"; to: "MasterTempo.coarse"; enabled:  shift }
+-  Wire { from: "%surface%.mixer.tempo"; to: "MasterTempo.fine";   enabled: !shift }
++  Wire { from: "%surface%.mixer.tempo"; to: "MasterTempo.coarse"; enabled: !shift }
++  Wire { from: "%surface%.mixer.tempo"; to: "MasterTempo.fine";   enabled:  shift }
+
+
+   // Channels
+diff --git a/CSI/S5/S5Deck.qml b/CSI/S5/S5Deck.qml
+index 32716f3..54a7689 100755
+--- a/CSI/S5/S5Deck.qml
++++ b/CSI/S5/S5Deck.qml
+@@ -1566,8 +1566,8 @@ Module
+           enabled: focusedDeckId == 1
+
+           Wire { from: "%surface%.back";   to: "decks.1.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.1.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.1.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.1.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.1.tempo.coarse"; enabled: !module.shift }
+         }
+
+         // Deck B
+@@ -1576,8 +1576,8 @@ Module
+           enabled: focusedDeckId == 2
+
+           Wire { from: "%surface%.back";   to: "decks.2.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.2.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.2.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.2.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.2.tempo.coarse"; enabled: !module.shift }
+         }
+
+         // Deck C
+@@ -1586,8 +1586,8 @@ Module
+           enabled: focusedDeckId == 3
+
+           Wire { from: "%surface%.back";   to: "decks.3.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.3.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.3.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.3.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.3.tempo.coarse"; enabled: !module.shift }
+         }
+
+         // Deck D
+@@ -1596,8 +1596,8 @@ Module
+           enabled: focusedDeckId == 4
+
+           Wire { from: "%surface%.back";   to: "decks.4.tempo.reset" }
+-          Wire { from: "%surface%.browse"; to: "decks.4.tempo.fine";   enabled: !module.shift }
+-          Wire { from: "%surface%.browse"; to: "decks.4.tempo.coarse"; enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.4.tempo.fine";   enabled:  module.shift }
++          Wire { from: "%surface%.browse"; to: "decks.4.tempo.coarse"; enabled: !module.shift }
+         }
+       }
+
